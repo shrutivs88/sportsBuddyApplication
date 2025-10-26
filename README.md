@@ -112,8 +112,5 @@ Then open: http://localhost:5173/
     └── README.md
 ```
 
-## 📄 License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
 
