@@ -6,7 +6,7 @@
     --color-dark-gray: #1A1A1A;
     --color-light-gray: #E0E0E0;
     --color-white: #FFFFFF;
-    --color-gold-primary: #FFD700; /* Main Gold */
+    --color-primary: rgb(231, 227, 200); /* Main Gold */
     --color-gold-dark: #DAA520;   /* Darker Gold for hover/accents */
     --color-text-on-dark: #C0C0C0; /* For secondary text on dark backgrounds */
 }
@@ -38,7 +38,7 @@ body {
 /* Headings (using Montserrat for distinctiveness) */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
     margin-bottom: 0.5em;
     line-height: 1.2;
 }
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background-color: var(--color-gold-primary);
+    background-color: var(--color-primary);
     color: var(--color-black);
 }
 
@@ -69,8 +69,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary {
     background-color: var(--color-dark-gray);
-    color: var(--color-gold-primary);
-    border: 1px solid var(--color-gold-primary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
@@ -103,7 +103,7 @@ input[type="number"]:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: var(--color-gold-primary);
+    border-color: var(--color-primary);
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
 }
 

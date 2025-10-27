@@ -1,34 +1,18 @@
-/* src/pages/PageStyles.css */
-/* Styles common to most page components */
-
-/* NOTE: :root and body styles for overall app are now primarily in App.css to avoid duplication. */
-/* Only page-specific or component-specific styles should be here. */
-
-/* Color Variables - Keeping these here as they are used by page components, but ensure App.css also has them or defines its own. */
 :root {
-    --color-primary: #1a1a1a; /* Dark background */
-    --color-secondary: #0d0d0d; /* Even darker for cards/sections */
-    --color-gold-primary: #FFD700; /* Gold for accents/headings */
-    --color-gold-secondary: #FFB300; /* Slightly darker gold */
+    --color-primary: #1a1a1a; 
+    --color-secondary: #0d0d0d; 
+    --color-primary: rgb(240, 233, 198); 
+    --color-gold-secondary: rgb(235, 218, 180); 
     --color-white: #ffffff;
     --color-light-gray: #cccccc;
-    --color-dark-gray: #2c2c2c; /* Used for forms/sections */
-    --color-dark-gray-light: #3a3a3a; /* Slightly lighter dark gray for inputs/checkbox backgrounds */
-    --color-text-on-dark: #e0e0e0; /* Light text on dark backgrounds */
-    --color-red-danger: #dc3545; /* For delete actions */
-    --color-green-success: #28a745; /* For success/add actions */
+    --color-dark-gray: #2c2c2c;
+    --color-dark-gray-light: #3a3a3a;
+    --color-text-on-dark: #e0e0e0;
+    --color-red-danger: #dc3545; 
+    --color-green-success: #28a745;
 }
 
-/* Base body styles, if not fully managed by App.css for specific page overrides */
-/* If App.css handles overall body, you might remove this. Keeping for now as a fallback. */
-body {
-    /* font-family: 'Arial', sans-serif; */ /* Already in App.css */
-    /* margin: 0; */ /* Already in App.css */
-    /* padding: 0; */ /* Already in App.css */
-    /* background-color: var(--color-primary); */ /* Managed by App.css's --color-background-dark */
-    /* color: var(--color-text-on-dark); */ /* Already in App.css */
-    /* line-height: 1.6; */ /* Already in App.css */
-}
+
 
 
 .container {
@@ -37,12 +21,6 @@ body {
     padding: 0 20px;
 }
 
-/* --- REMOVED DUPLICATE HEADER/NAVBAR STYLES FROM HERE --- */
-/* .header, .navbar, .logo, .nav-menu, .nav-item, .nav-link, .btn-logout, .hamburger */
-/* These are now managed in App.css */
-
-
-/* Basic Button Styles (These are general and can stay, but ensure App.css doesn't duplicate them for primary/secondary/danger) */
 .btn {
     padding: 10px 20px;
     border-radius: 5px;
@@ -56,7 +34,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--color-gold-primary);
+    background-color: var(--color-primary);
     color: var(--color-secondary);
     border: none;
 }
@@ -67,8 +45,8 @@ body {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--color-gold-primary);
-    border: 2px solid var(--color-gold-primary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
@@ -94,14 +72,14 @@ body {
 }
 
 .btn-success:hover {
-    background-color: #218838; /* Darker green */
+    background-color: #218838; 
 }
 
-/* Form element styles (common) - These are also in App.css, consider consolidating */
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="datetime-local"], /* Added for event date/time */
+input[type="datetime-local"],
 select,
 textarea {
     width: 100%;
@@ -134,7 +112,7 @@ textarea::placeholder {
 }
 
 
-/* Footer Styles - These are also in App.css, consider consolidating */
+
 .footer {
     background-color: var(--color-secondary);
     color: var(--color-light-gray);
@@ -142,7 +120,7 @@ textarea::placeholder {
     text-align: center;
     border-top: 1px solid var(--color-gold-secondary);
     font-size: 0.9em;
-    margin-top: 40px; /* Space above footer */
+    margin-top: 40px; 
 }
 
 .footer p {
@@ -150,7 +128,7 @@ textarea::placeholder {
 }
 
 .footer a {
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -158,7 +136,7 @@ textarea::placeholder {
     text-decoration: underline;
 }
 
-/* Global Alert/Notification Styles - These are also in App.css, consider consolidating */
+
 .alert {
     padding: 15px;
     margin-bottom: 20px;
@@ -190,30 +168,30 @@ textarea::placeholder {
 }
 
 
-/* Specific Page Component Styles (from previous responses) */
+
 
 section {
     padding: 60px 0;
-    text-align: center; /* Default text alignment for sections */
-    color: var(--color-text-on-dark); /* Ensure text color is consistent */
+    text-align: center; 
+    color: var(--color-text-on-dark); 
 }
 
 section h2, section h3 {
     margin-bottom: 40px;
     font-size: 2em;
-    color: var(--color-gold-primary); /* Consistent heading color */
+    color: var(--color-primary); 
 }
 
 .hero-section {
     padding: 100px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/sports_bg.jpg') no-repeat center center/cover; /* Ensure /sports_bg.jpg is directly in public/ */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/sports_bg1.jpg') no-repeat center center/cover; /* Ensure /sports_bg.jpg is directly in public/ */
     color: var(--color-white);
-    min-height: calc(100vh - 80px - 60px); /* Adjust based on header (approx 80px) and footer (approx 60px) height */
-    display: flex; /* Use flexbox to center content vertically */
+    min-height: calc(100vh - 80px - 60px); 
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-attachment: fixed; /* Makes the background image fixed relative to the viewport */
+    background-attachment: fixed; 
 }
 
 /* --- START: New styles for hero section icons --- */
@@ -234,47 +212,47 @@ section h2, section h3 {
     cursor: pointer;
     padding: 20px;
     border-radius: 15px;
-    background-color: rgba(44, 44, 44, 0.7); /* Slightly lighter dark gray with transparency */
+    background-color: rgba(44, 44, 44, 0.7); 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    width: 120px; /* Fixed width for each icon item */
+    width: 120px; 
     text-align: center;
-    border: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
+    border: 1px solid rgba(255, 215, 0, 0.3); 
 }
 
 .hero-sport-icon-item:hover {
-    transform: translateY(-8px) scale(1.05); /* Lift and slightly enlarge on hover */
+    transform: translateY(-8px) scale(1.05); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-    background-color: rgba(58, 58, 58, 0.8); /* Darker and more opaque on hover */
+    background-color: rgba(58, 58, 58, 0.8); 
 }
 
 .hero-sport-icon {
-    width: 80px; /* Larger icon size for hero section */
+    width: 80px; 
     height: 80px;
     object-fit: contain;
     margin-bottom: 15px;
-    border-radius: 50%; /* Circular icons */
-    background-color: rgba(255, 255, 255, 0.15); /* Slightly more prominent background for icons */
+    border-radius: 50%; 
+    background-color: rgba(255, 255, 255, 0.15); 
     padding: 10px;
-    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.2); /* Inner glow effect */
+    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.2); 
 }
 
 .hero-sport-icon-item p {
     margin: 0;
-    font-size: 1.1em; /* Larger font for icon names */
+    font-size: 1.1em; 
     color: var(--color-white);
     font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
 }
 /* --- END: New styles for hero section icons --- */
 
 
-.hero-section h2 { /* This rule is now redundant if h2 is removed */
+.hero-section h2 { 
     font-size: 2.8em;
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
 }
 
-.hero-section p { /* This rule is now redundant if p is removed */
+.hero-section p { 
     font-size: 1.2em;
     margin-bottom: 30px;
     max-width: 700px;
@@ -283,14 +261,14 @@ section h2, section h3 {
 }
 
 .hero-section .btn {
-    margin: 10px; /* Space between buttons */
+    margin: 10px; 
 }
 
 
 /* Authentication Pages */
 .auth-page {
-    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
-    display: flex; /* Use flexbox for centering */
+    min-height: calc(100vh - 120px); 
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
@@ -308,7 +286,7 @@ section h2, section h3 {
 .auth-form h3 {
     text-align: center;
     margin-bottom: 30px;
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
     font-size: 1.8em;
 }
 
@@ -332,7 +310,7 @@ section h2, section h3 {
 }
 
 .auth-switch-text a {
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
 }
@@ -350,15 +328,15 @@ section h2, section h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1000px; /* Max width for grid content */
+    max-width: 1000px; 
     margin: 0 auto;
-    padding: 20px; /* Add some padding to the grid container itself */
+    padding: 20px;
 }
 
 .loading-state, .error-state, .no-data-message {
     padding: 50px 20px;
     font-size: 1.2em;
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
     text-align: center;
 }
 
@@ -366,9 +344,9 @@ section h2, section h3 {
 /* Apply common card styles to both form and display card */
 .profile-page .profile-details,
 .profile-page .profile-form,
-.profile-display-card { /* Added .profile-display-card here */
+.profile-display-card { 
     max-width: 600px;
-    margin: 30px auto; /* Centered with top/bottom margin */
+    margin: 30px auto; 
     text-align: left;
     background-color: var(--color-dark-gray);
     padding: 30px;
@@ -380,11 +358,11 @@ section h2, section h3 {
 .profile-display-card p {
     font-size: 1.1em;
     margin-bottom: 12px;
-    color: var(--color-text-on-dark); /* Ensure text color */
+    color: var(--color-text-on-dark);
 }
 
 .profile-display-card strong {
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
 }
 
 /* Profile Form Specific Styles */
@@ -405,9 +383,9 @@ input[type="email"],
 .profile-form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--color-gold-primary);
+    border: 1px solid var(--color-primary);
     border-radius: 5px;
-    background-color: var(--color-dark-gray-light); /* Slightly lighter background for inputs */
+    background-color: var(--color-dark-gray-light); 
     color: var(--color-text-on-dark);
     font-size: 1em;
     box-sizing: border-box;
@@ -451,11 +429,11 @@ textarea::placeholder {
     width: auto; /* Override 100% width for checkboxes */
     height: 18px; /* Adjust checkbox size */
     margin: 0;
-    accent-color: var(--color-gold-primary); /* Style checkbox itself */
+    accent-color: var(--color-primary); /* Style checkbox itself */
 }
 
 .form-actions,
-.profile-actions { /* Apply to both form actions and profile display card actions */
+.profile-actions { 
     display: flex;
     justify-content: flex-end;
     gap: 15px;
@@ -500,7 +478,7 @@ textarea::placeholder {
     text-align: center;
     margin-bottom: 25px;
     font-size: 1.5em;
-    color: var(--color-gold-primary); /* Use primary gold for section headings */
+    color: var(--color-primary); /* Use primary gold for section headings */
 }
 
 .admin-form-inline {
@@ -589,7 +567,7 @@ textarea::placeholder {
 
 .sports-category-section h3 {
     margin-bottom: 30px;
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
 }
 
 .sports-icons-grid {
@@ -621,7 +599,7 @@ textarea::placeholder {
 }
 
 .sport-icon-item.active {
-    border: 2px solid var(--color-gold-primary); /* Highlight active sport */
+    border: 2px solid var(--color-primary); /* Highlight active sport */
     background-color: #3a3a3a;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -651,7 +629,7 @@ textarea::placeholder {
 
 .filtered-events-section h3 {
     margin-bottom: 30px;
-    color: var(--color-gold-primary);
+    color: var(--color-primary);
 }
 
 /* Inherits .grid-container and .card styles */
